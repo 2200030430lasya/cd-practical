@@ -1,0 +1,7 @@
+- hosts: webservers
+  vars_files:
+    - group_vars/secrets.yml
+  tasks:
+    - name: Display database credentials
+      debug:
+        msg: "DB Username: {{ db_username }}, DB Password: {{ db_password }}"
